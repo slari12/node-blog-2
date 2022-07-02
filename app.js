@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 //middlewares and static files for styling such as style.css
 app.use(express.static('public')); //public, name of style.css folder
 app.use(express.urlencoded({extended: true})); //for post request handler ACCEPTING DATA
-app.use(morgan('dev')) //dev for morgan dependency
+app.use(morgan('dev')); //dev for morgan dependency
 
 //divided group in a
 app.get('/', (req, res) => {
