@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose'); //npm install mongoose
@@ -7,12 +8,12 @@ const blogRoutes = require('./routes/blogRoutes');
 const app = express();
 
 //connect to mongodb, <username> = username access, <password> = password used, ? = database name
-const dbURI = 'mongodb+srv://netninja:1234nodejs@nodetuts.07zju.mongodb.net/node-tuts?retryWrites=true&w=majority';
-mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
+const dbURL = 'mongodb+srv://netninja:1234nodejs@nodetuts.07zju.mongodb.net/node-tuts?retryWrites=true&w=majority';
+mongoose.connect(dbURL, {useNewUrlParser: true, useUnifiedTopology: true})
 .then((result) => {
     console.log('database connected');
     //listen for requests
-    app.listen(process.env.PORT || 8000); //mismong environment daw ng kompyuter
+    app.listen(process.env.PORT); //mismong environment daw ng kompyuter
 })
 .catch((err, req) => console.log(err))
 
