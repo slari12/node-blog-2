@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
 body{
   max-width: 1200px;
   margin: 20px auto;
-  padding: 0 20px;
-  font-family: 'Noto Serif', serif;
+  /* padding: 0 20px; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   max-width: 1200px;
 }
 p, h1, h2, h3, a, ul{
@@ -15,11 +17,11 @@ p, h1, h2, h3, a, ul{
 /* nav & footer styles */
 nav{
   display: flex;
+  /* background-color: #06283D; */
   justify-content: space-between;
   margin-bottom: 60px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
-  text-transform: uppercase;
 }
 nav ul{
   display: flex;
@@ -88,17 +90,16 @@ h3{
 .create-blog textarea{
   display: block;
   width: 100%;
-  margin: 10px 0;
   padding: 8px;
 }
 .create-blog label{
   display: block;
-  margin-top: 24px;
 }
 textarea{
   height: 120px;
 }
 .create-blog button{
+  width: 150px;
   margin-top: 20px;
   background: crimson;
   color: white;
@@ -107,3 +108,7 @@ textarea{
   font-size: 1.2em;
   cursor: pointer;
 }
+/* button{
+  position: relative;
+  right: 11px;
+} */
